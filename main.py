@@ -1,21 +1,19 @@
 #!/bin/sh
 import json
-import os
-import sys
-import web
 import mimetypes
+import sys
 import urllib
-import requests
-
 from datetime import datetime
 
+import os
+import requests
+import web
 from web.wsgiserver import CherryPyWSGIServer
 
+import settings
 import utilities
 from main_utilities import get_configuration_file, set_configuration_file,\
     set_user_data_file
-import settings
-
 
 # http://pythonhosted.org/PyInstaller/runtime-information.html#run-time-information
 if getattr(sys, 'frozen', False):

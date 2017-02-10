@@ -1,11 +1,10 @@
-import os
+import glob
 import json
 import sys
-import glob
-
-from nose.tools import *
-from paste.fixture import TestApp
 from unittest import TestCase
+
+import os
+from paste.fixture import TestApp
 
 from main import app
 
@@ -19,8 +18,6 @@ SESSIONS_DIR = os.path.join(ABS_PATH, 'webapps', 'CLIx', 'sessions')
 
 
 class BaseTestCase(TestCase):
-    """
-    """
     @staticmethod
     def _filename(file_object):
         return file_object.name.split('/')[-1]
